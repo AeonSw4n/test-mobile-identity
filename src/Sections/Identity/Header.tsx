@@ -6,9 +6,9 @@ import { PublicKey } from "../../State/App.state";
 const config = {
   identityConfig: {
     network: "testnet",
-    uri: "http://identity.deso-seed-3.io"
+    uri: "https://identity.deso-seed-3.io"
   },
-  nodeUri: "http://deso-seed-3.io:18001"
+  nodeUri: "https://node.deso-seed-3.io"
 } as DesoConfig;
 
 const deso = new Deso(config);
