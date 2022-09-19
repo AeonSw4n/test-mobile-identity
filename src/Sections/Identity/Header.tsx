@@ -1,8 +1,17 @@
-import Deso from "deso-protocol";
+import {Deso, DesoConfig} from "deso-protocol";
 import { useRecoilState } from "recoil";
 import { Button } from "../../Components/Button";
 import { PublicKey } from "../../State/App.state";
-const deso = new Deso();
+
+const config = {
+  identityConfig: {
+    network: "testnet",
+    uri: "http://identity.deso-seed-3.io"
+  },
+  nodeUri: "http://deso-seed-3.io:18001"
+} as DesoConfig;
+
+const deso = new Deso(config);
 export const Header = () => {
   const [publicKey, setPublicKey] = useRecoilState(PublicKey);
   return (
